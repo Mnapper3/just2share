@@ -9158,3 +9158,73 @@ Processing by PicsController#index as HTML
   Rendered pics/index.html.haml within layouts/application (5.4ms)
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
 Completed 200 OK in 166ms (Views: 164.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 98.213.220.117 at 2016-12-09 02:09:01 +0000
+Cannot render console from 98.213.220.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicsController#index as HTML
+  [1m[35mPic Load (0.4ms)[0m  SELECT "pics".* FROM "pics"  ORDER BY created_at DESC
+  Rendered pics/index.html.haml within layouts/application (20.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 450ms (Views: 432.4ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 98.213.220.117 at 2016-12-09 02:09:16 +0000
+Cannot render console from 98.213.220.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/XDdpSqOb4wMjDwZHrOmmQuL7CFsfi5gp5754n+lp/TOlXsrFtIwPhzrBVjsgIibcACXrMJS1ToQA7HJrw7c6g=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://just2share-nappdaddy2000.c9users.io/
+Completed 302 Found in 28ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 98.213.220.117 at 2016-12-09 02:09:16 +0000
+Cannot render console from 98.213.220.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  [1m[36mPic Load (0.3ms)[0m  [1mSELECT "pics".* FROM "pics"  ORDER BY created_at DESC[0m
+  Rendered pics/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/5" for 98.213.220.117 at 2016-12-09 02:09:17 +0000
+Cannot render console from 98.213.220.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPic Load (0.2ms)[0m  SELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ? AND "votes"."vote_scope" IS NULL  [["votable_id", 5], ["votable_type", "Pic"], ["vote_flag", "t"]]
+  Rendered pics/show.html.haml within layouts/application (30.2ms)
+Completed 200 OK in 97ms (Views: 91.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fc969dc1c6ff531abcf368089dcbaf5775133b0626ff56b52301a059fc0f9e1e.woff" for 98.213.220.117 at 2016-12-09 02:09:17 +0000
+Cannot render console from 98.213.220.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/pics/5/like" for 98.213.220.117 at 2016-12-09 02:09:18 +0000
+Cannot render console from 98.213.220.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"QWr6OUK586J3nVAM/VEIo7U2bfMOmFOSINnvMhewePXSls9D5i89u6O8JOxTXzxUbZjolFRjTH4O7Cerwkmnvg==", "id"=>"5"}
+  [1m[36mPic Load (0.1ms)[0m  [1mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for 98.213.220.117 at 2016-12-09 02:09:19 +0000
+Cannot render console from 98.213.220.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_sessions_new_html_erb__4585070495268486012_69904701801640 at /home/ubuntu/workspace/app/views/devise/sessions/new.html.erb:16)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_sessions_new_html_erb__4585070495268486012_69904701801640 at /home/ubuntu/workspace/app/views/devise/sessions/new.html.erb:21)
+  Rendered devise/shared/_links.html.erb (7.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (64.5ms)
+Completed 200 OK in 118ms (Views: 115.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.213.220.117 at 2016-12-09 02:09:21 +0000
+Cannot render console from 98.213.220.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  [1m[35mPic Load (0.2ms)[0m  SELECT "pics".* FROM "pics"  ORDER BY created_at DESC
+  Rendered pics/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.2ms)
